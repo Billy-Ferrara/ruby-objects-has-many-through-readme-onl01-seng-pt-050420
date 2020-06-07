@@ -1,7 +1,7 @@
 class Customer
 
     attr_reader :name
-    attr_accessor :age, :meals 
+    attr_accessor :age, :meals
 
     @@all = []
 
@@ -20,7 +20,7 @@ class Customer
   end
 
   def meals
-    Meals.all.select do |meal|
+    Meal.all.select do |meal|
       meal.customer == self
     end
   end
